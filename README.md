@@ -32,6 +32,7 @@ Built a library of Markdown-defined skills, each with a trigger description Clau
 - Standardized output: every BI project ships with the same 7-step README; every mentee application package ships with 3 cover-letter variants and a 4-line summary — no rebuilding structure per session.
 - Reduced context-switching: one Chat interface plans across 4 business domains; execution happens in-tool (Power BI Desktop, GitHub, the live site, LinkedIn/Upwork).
 - Recommendation: extend the same skill-registration pattern to any new recurring workflow before attempting it ad hoc — the setup cost is paid once, reused indefinitely.
+- Eval coverage in progress: `linkedin-job-intel` evaluated first — a synthetic eval, then a real production validation run against live daily job data (not a fixture) that caught and fixed 3 live rule gaps a synthetic test couldn't have surfaced (a fraud blocklist never encoded into the deployed rules, a location-restriction phrasing variant, and an unreliable "worldwide"-keyword signal that was wrong 11 of 12 times). Full scorecard: [`eval-results/linkedin-job-intel/scorecard.md`](https://github.com/anthchilaka/claude-workspace-audit/blob/main/eval-results/linkedin-job-intel/scorecard.md).
 
 ## ➡️ Next Steps
-Complete Claude Cowork ↔ GitHub MCP connection (currently CLI-only); add eval coverage per skill using `skill-creator`; consider a 4th subagent if a new content profile emerges.
+Eval coverage rolling out skill-by-skill using `skill-creator` — `linkedin-job-intel` complete, including a real production validation pass beyond the synthetic eval; remaining 13 skills in progress. Complete Claude Cowork ↔ GitHub MCP connection (currently CLI-only); consider a 4th subagent if a new content profile emerges.
